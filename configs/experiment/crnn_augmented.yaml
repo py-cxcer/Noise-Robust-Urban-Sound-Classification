@@ -1,0 +1,12 @@
+experiment:
+  id: crnn_augmented
+  description: CRNN with BiGRU trained with configured augmentation.
+
+components:
+  paths: ../paths/default.yaml
+  dataset: ../dataset/urbansound8k.yaml
+  audio: ../audio/default.yaml
+  augmentation: ../augmentation/augmented.yaml
+  model: ../model/crnn.yaml
+  training: ../training/default.yaml
+  evaluation: ../evaluation/robustness.yaml

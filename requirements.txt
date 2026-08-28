@@ -1,0 +1,32 @@
+# Shared dependencies. Install one PyTorch profile first:
+# requirements-cuda.txt for the verified GTX 1660 Ti environment, or
+# requirements-cpu.txt for a machine without an NVIDIA GPU.
+
+# Audio processing
+librosa>=0.10.2
+soundfile>=0.12.1
+
+# Data analysis and scientific computing
+numpy>=1.26
+pandas>=2.2
+scipy>=1.12
+scikit-learn>=1.4
+
+# Configuration, progress reporting, plots, and experiment logging
+PyYAML>=6.0
+tqdm>=4.66
+matplotlib>=3.8
+tensorboard>=2.16
+
+# Reproducible exploratory analysis notebooks
+jupyterlab>=4.2
+ipykernel>=6.29
+nbconvert>=7.16
+
+# Reproducible public dataset acquisition
+kagglehub==1.0.2
+huggingface-hub[hf-xet]==1.28.0
+pyarrow==25.0.1
+
+# Lightweight test tooling
+pytest>=8.0

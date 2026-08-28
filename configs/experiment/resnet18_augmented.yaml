@@ -1,0 +1,16 @@
+experiment:
+  id: resnet18_augmented
+  description: Non-pretrained ResNet18 trained with configured augmentation.
+
+components:
+  paths: ../paths/default.yaml
+  dataset: ../dataset/urbansound8k.yaml
+  audio: ../audio/default.yaml
+  augmentation: ../augmentation/augmented.yaml
+  model: ../model/resnet18.yaml
+  training: ../training/default.yaml
+  evaluation: ../evaluation/robustness.yaml
+
+overrides:
+  training:
+    batch_size: 8

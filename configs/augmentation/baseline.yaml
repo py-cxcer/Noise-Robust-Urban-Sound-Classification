@@ -1,0 +1,21 @@
+name: baseline
+enabled: false
+
+waveform:
+  time_shift:
+    enabled: false
+  random_gain:
+    enabled: false
+  background_noise:
+    enabled: false
+  pitch_shift:
+    enabled: false
+  time_stretch:
+    enabled: false
+
+spectrogram:
+  frequency_mask:
+    enabled: false
+  time_mask:
+    enabled: false
+

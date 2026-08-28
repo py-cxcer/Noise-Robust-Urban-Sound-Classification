@@ -1,0 +1,10 @@
+name: crnn
+input_channels: 1
+num_classes: 10
+cnn_channels: [32, 64, 128]
+recurrent_type: gru
+recurrent_hidden_size: 128
+recurrent_layers: 1
+bidirectional: true
+dropout: 0.3
+

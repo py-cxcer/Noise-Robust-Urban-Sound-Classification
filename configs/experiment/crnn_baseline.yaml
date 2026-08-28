@@ -1,0 +1,12 @@
+experiment:
+  id: crnn_baseline
+  description: CRNN with BiGRU trained without robustness augmentation.
+
+components:
+  paths: ../paths/default.yaml
+  dataset: ../dataset/urbansound8k.yaml
+  audio: ../audio/default.yaml
+  augmentation: ../augmentation/baseline.yaml
+  model: ../model/crnn.yaml
+  training: ../training/default.yaml
+  evaluation: ../evaluation/robustness.yaml

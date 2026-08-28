@@ -1,0 +1,12 @@
+experiment:
+  id: cnn_augmented
+  description: CNN trained with waveform and spectrogram augmentation.
+
+components:
+  paths: ../paths/default.yaml
+  dataset: ../dataset/urbansound8k.yaml
+  audio: ../audio/default.yaml
+  augmentation: ../augmentation/augmented.yaml
+  model: ../model/cnn.yaml
+  training: ../training/default.yaml
+  evaluation: ../evaluation/robustness.yaml

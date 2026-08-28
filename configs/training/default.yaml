@@ -1,0 +1,38 @@
+seed: 42
+deterministic: true
+device: auto
+epochs: 50
+batch_size: 16
+num_workers: 2
+pin_memory: true
+mixed_precision: true
+gradient_accumulation_steps: 1
+
+loss:
+  name: cross_entropy
+
+optimizer:
+  name: adamw
+  learning_rate: 0.001
+  weight_decay: 0.0001
+
+scheduler:
+  name: reduce_on_plateau
+  mode: max
+  factor: 0.5
+  patience: 3
+
+early_stopping:
+  enabled: true
+  monitor: macro_f1
+  mode: max
+  patience: 8
+
+checkpointing:
+  save_best: true
+  save_last: true
+  monitor: macro_f1
+  mode: max
+
+logging:
+  tensorboard: true

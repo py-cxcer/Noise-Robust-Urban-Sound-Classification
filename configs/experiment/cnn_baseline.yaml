@@ -1,0 +1,12 @@
+experiment:
+  id: cnn_baseline
+  description: CNN trained without robustness-oriented augmentation.
+
+components:
+  paths: ../paths/default.yaml
+  dataset: ../dataset/urbansound8k.yaml
+  audio: ../audio/default.yaml
+  augmentation: ../augmentation/baseline.yaml
+  model: ../model/cnn.yaml
+  training: ../training/default.yaml
+  evaluation: ../evaluation/robustness.yaml

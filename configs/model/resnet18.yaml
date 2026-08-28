@@ -1,0 +1,6 @@
+name: resnet18
+input_channels: 1
+num_classes: 10
+pretrained: false
+dropout: 0.2
+

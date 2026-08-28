@@ -1,0 +1,23 @@
+experiment:
+  id: cnn_baseline_development
+  description: Small deterministic configuration for pipeline development.
+
+components:
+  paths: ../paths/default.yaml
+  dataset: ../dataset/urbansound8k.yaml
+  audio: ../audio/default.yaml
+  augmentation: ../augmentation/baseline.yaml
+  model: ../model/cnn.yaml
+  training: ../training/default.yaml
+  evaluation: ../evaluation/robustness.yaml
+
+# Overrides make a smoke run cheap without editing the component defaults used by
+# full experiments.
+overrides:
+  training:
+    epochs: 2
+    batch_size: 4
+    num_workers: 0
+    logging:
+      tensorboard: false
+

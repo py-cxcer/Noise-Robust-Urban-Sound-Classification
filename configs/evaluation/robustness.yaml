@@ -1,0 +1,34 @@
+# Clean is represented with a null SNR because no noise is mixed into the signal.
+conditions:
+  - name: clean
+    snr_db: null
+  - name: snr_20db
+    snr_db: 20.0
+  - name: snr_10db
+    snr_db: 10.0
+  - name: snr_0db
+    snr_db: 0.0
+
+# This seed is independent from the training seed. It makes noise-file and
+# noise-segment selection repeatable across model evaluations.
+corruption_seed: 2025
+# Use the held-out MS-SNSD split for every reported robustness condition.
+noise_directory: data/external_noise/MS-SNSD/noise_test
+
+# Mean-square powers below this threshold are treated as effectively silent.
+# A silent clean signal is preserved; a non-silent signal with silent noise is
+# rejected because a finite SNR cannot be constructed honestly.
+mixing:
+  power_epsilon: 1.0e-12
+
+metrics:
+  - accuracy
+  - macro_precision
+  - macro_recall
+  - macro_f1
+  - per_class_precision
+  - per_class_recall
+  - per_class_f1
+  - confusion_matrix
+
+save_predictions: true

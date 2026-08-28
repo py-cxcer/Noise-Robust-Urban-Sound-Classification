@@ -1,0 +1,40 @@
+name: augmented
+enabled: true
+
+waveform:
+  time_shift:
+    enabled: true
+    probability: 0.5
+    max_shift_fraction: 0.2
+  random_gain:
+    enabled: true
+    probability: 0.5
+    min_gain_db: -6.0
+    max_gain_db: 6.0
+  background_noise:
+    enabled: true
+    probability: 0.5
+    # Keep training augmentation isolated from evaluation-only noise recordings.
+    noise_directory: data/external_noise/MS-SNSD/noise_train
+    min_snr_db: 0.0
+    max_snr_db: 20.0
+  pitch_shift:
+    enabled: false
+    probability: 0.0
+    min_semitones: -2.0
+    max_semitones: 2.0
+  time_stretch:
+    enabled: false
+    probability: 0.0
+    min_rate: 0.9
+    max_rate: 1.1
+
+spectrogram:
+  frequency_mask:
+    enabled: true
+    probability: 0.5
+    max_mask_bins: 8
+  time_mask:
+    enabled: true
+    probability: 0.5
+    max_mask_frames: 16

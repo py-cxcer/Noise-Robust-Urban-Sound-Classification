@@ -1,0 +1,75 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Packaging artifacts
+build/
+dist/
+*.egg-info/
+cse437_ieee_overleaf_project.zip
+
+# Local progress logs and paper-workflow files
+/PROJECT_STATUS.md
+/PHASE_3_PROJECT_LOG.md
+/paper/
+
+# IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Datasets and derived audio can be very large. Keep only placeholders.
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/external_noise/*
+!data/external_noise/.gitkeep
+data/metadata/*
+!data/metadata/.gitkeep
+
+# Generated experiment artifacts
+experiments/*
+!experiments/.gitkeep
+checkpoints/*
+!checkpoints/.gitkeep
+logs/*
+!logs/.gitkeep
+results/metrics/*
+!results/metrics/.gitkeep
+results/figures/*
+!results/figures/.gitkeep
+results/confusion_matrices/*
+!results/confusion_matrices/.gitkeep
+results/predictions/*
+!results/predictions/.gitkeep
+results/preprocessing_inspection/
+results/preprocessing_training_smoke/
+results/snr_inspection/
+results/robustness/
+results/robustness_smoke/
+results/analysis/
+
+# TensorBoard event files and model artifacts outside standard directories
+events.out.tfevents.*
+*.pt
+*.pth
+*.ckpt

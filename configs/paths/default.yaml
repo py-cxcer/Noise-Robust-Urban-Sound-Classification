@@ -1,0 +1,7 @@
+# Paths are resolved relative to the repository root by the Phase B loader.
+data: data
+experiments: experiments
+checkpoints: checkpoints
+logs: logs
+results: results
+
